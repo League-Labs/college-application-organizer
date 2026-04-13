@@ -23,9 +23,16 @@ export const DEFAULT_CHECKLIST = {
   testScores: false,
 };
 
+function generateId() {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
 export function createSchool(name, deadline) {
   return {
-    id: Date.now().toString(),
+    id: generateId(),
     name,
     deadline: deadline || '',
     status: 'Not Started',
@@ -37,7 +44,7 @@ export function createSchool(name, deadline) {
 
 export function createEssay(prompt, wordLimit) {
   return {
-    id: Date.now().toString() + Math.random().toString(36).slice(2),
+    id: generateId(),
     prompt: prompt || '',
     wordLimit: wordLimit || 650,
     draft: '',

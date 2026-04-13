@@ -135,7 +135,7 @@ export default function EssayTracker({ essays, onChange }) {
               min={1}
               max={5000}
               value={newWordLimit}
-              onChange={e => setNewWordLimit(e.target.value)}
+              onChange={e => setNewWordLimit(Number(e.target.value))}
             />
           </label>
           <div className="modal-actions">

@@ -1,0 +1,61 @@
+/* ============================================================
+   CSS Reset + Root Variables
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand palette — approachable teal/indigo for students */
+  --accent:        #4f46e5;
+  --accent-light:  #eef2ff;
+  --accent-dark:   #3730a3;
+  --success:       #22c55e;
+  --warning:       #f59e0b;
+  --danger:        #ef4444;
+  --purple:        #8b5cf6;
+
+  /* Neutrals */
+  --bg:            #f8fafc;
+  --surface:       #ffffff;
+  --surface-2:     #f1f5f9;
+  --border:        #e2e8f0;
+  --border-dark:   #cbd5e1;
+  --text:          #1e293b;
+  --text-2:        #64748b;
+  --text-3:        #94a3b8;
+
+  /* Shadow */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow:     0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+
+  /* Typography */
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { cursor: pointer; font: inherit; }
+input, select, textarea { font: inherit; }
+
+ul { list-style: none; }
